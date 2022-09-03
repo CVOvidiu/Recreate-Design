@@ -1,3 +1,49 @@
+@media (max-width: 1050px) {
+    main #menu span:nth-last-child(1) {
+        display: none;
+    }
+
+    main #events #date {
+        display: none;
+    }
+}
+
+@media (min-width: 1801px) {
+    main #carousel {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 1800px) {
+    main #carousel {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    main #events #date-list .item:nth-last-child(-n+2) {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1500px) {
+    main #carousel {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main #events #date-list .item:nth-last-child(-n+4) {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    main #carousel {
+        grid-template-columns: 1fr;
+    }
+
+    main #events #date-list .item:nth-last-child(-n+6) {
+        display: none !important;
+    }
+}
+
 main {
     padding-left: 300px;
     padding-right: 450px;
@@ -18,30 +64,6 @@ main #menu {
     display: flex;
     column-gap: 50px;
     white-space: nowrap;
-}
-
-@media (min-width: 1801px) {
-    main #carousel {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-}
-
-@media (max-width: 1800px) {
-    main #carousel {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
-@media (max-width: 1500px) {
-    main #carousel {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 1200px) {
-    main #carousel {
-        grid-template-columns: 1fr;
-    }
 }
 
 main #carousel {
@@ -94,6 +116,7 @@ main #events #wrapper {
     color: var(--primary);
     align-items: center;
     margin-bottom: 50px;
+    white-space: nowrap;
 }
 
 main #events #date {
@@ -102,15 +125,16 @@ main #events #date {
     padding: 15px 20px;
     border-width: 2px;
     border-color: var(--primary);
+    margin-left: 50px;
 }
 
 main #events #date-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    display: flex;
     margin-bottom: 50px;
+    justify-content: space-between;
 }
 
-main #events #date-list #item {
+main #events #date-list .item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
